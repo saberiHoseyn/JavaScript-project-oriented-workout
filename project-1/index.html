@@ -48,11 +48,28 @@
 
        .message .loading {
            color: #e74c3c;
+           display: none;
        }
 
-       .message .success {
-            color: #27ae60
+        .message .success {
+            color: #27ae60;
+            display: none;
         }
+
+        #error-message {
+            font-size: .9em;
+            color: #e74c3c;
+            display: none;
+        }
+
+        #error-message.active {
+            display: block;
+        }
+
+        .c100 {
+            display: none;
+        }
+
     </style>
 </head>
 <body>
@@ -61,7 +78,8 @@
             <input type="text" id="input-conter" placeholder="زمان مورد نظر خود را به ثانیه وارد کنید">
             <button id="start-counter">شروع</button>
         </div>
-        <div class="c100 p50">
+        <div id="error-message" class=""></div>
+        <div class="c100 p100">
             <span>250</span>
             <div class="slice">
                 <div class="bar"></div>
@@ -70,8 +88,12 @@
         </div>
         <div class="message">
             <span class="loading">درحال اجرا ...</span>
-            <span class="success">شمارنده با موفقیت به پایان رسید</span>
+            <span class="success ">شمارنده با موفقیت به پایان رسید</span>
         </div>
     </div>
+
+
+
+    <script src="./script.js"></script>
 </body>
 </html>
