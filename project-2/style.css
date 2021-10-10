@@ -1,0 +1,84 @@
+html , body , input {
+    font-family: Vazir !important;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3em;
+}
+
+.myplayer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    direction: ltr;
+    overflow: hidden;
+    transition: all .2s;
+}
+
+.myplayer video {
+    width: 100%;
+}
+
+.myplayer .myplayer-controls{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #444;
+
+}
+
+.myplayer .controls-progressbar {
+    height: 6px;
+    background-color: #e1e1e1;
+    width: 100%;
+}
+
+.myplayer .controls-progressbar .controls-progressbar-current {
+    -webkit-appearance: none;
+    height: 6px;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(to right , rgba(230,126,34,1)10% , #e1e1e1 0% );
+}
+
+.myplayer .controls-btns {
+    margin: 10px 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.myplayer .controls-btns .btns {
+    font-size: 1.3em;
+    cursor: pointer;
+}
+.myplayer .controls-btns .left ,
+.myplayer .controls-btns .right {
+    display: flex;
+    align-items: center;
+}
+
+
+.myplayer .controls-btns .left .btns:not(:first-child) ,
+.myplayer .controls-btns .right .btns:not(:first-child) {
+    margin-left: 20px;
+
+}
+
+.myplayer .controls-btns .left .timer {
+    font-size: .9em;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.myplayer .controls-btns .left .timer span:not(:first-child) {
+    margin-left: 4px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="style.css">
+    <title>custom video player</title>
+</head>
+<body>
+    <div class="myplayer">
+        <video src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></video>
+
+        <div class="myplayer-controls">
+            <div class="controls-progressbar">
+                <input class="controls-progressbar-current" type="range" min="1" max="100" value="">
+            </div>
+
+            <div class="controls-btns">
+                <div class="left">
+                    <div class="btns play">
+                        <ion-icon name="caret-forward-outline"></ion-icon>
+                    </div>
+                    <div class="btns rewind">
+                        <ion-icon name="play-back-sharp"></ion-icon>
+                    </div>
+                    <div class="btns forward">
+                        <ion-icon name="play-forward-sharp"></ion-icon>
+                    </div>
+                    <div class="timer">
+                        <span>00:00</span>
+                        <span>/</span>
+                        <span>00:00</span>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="btns">
+                        <ion-icon name="volume-medium-sharp"></ion-icon>
+                    </div>
+                    <div class="btns">
+                        <ion-icon name="expand-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
