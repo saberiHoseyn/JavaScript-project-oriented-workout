@@ -47,12 +47,43 @@ body {
     background: linear-gradient(to right , rgba(230,126,34,1)10% , #e1e1e1 0% );
 }
 
+.myplayer .controls-progressbar-current::-moz-range-track {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.myplayer .controls-progressbar-current:focus {
+    outline: none;
+    border: none;
+}
+
+.myplayer .controls-progressbar-current::-webkit-slider-thumb {
+    background-color: transparent;
+    height: 13px;
+    width: 13px;
+    -webkit-appearance: none !important;
+}
+
+.myplayer .controls-progressbar-current::-moz-range-thumb {
+    background-color: transparent;
+    height: 13px;
+    width: 13px;
+    -webkit-appearance: none !important;
+    border: none;
+}
+
 .myplayer .controls-btns {
-    margin: 10px 15px;
+    margin: 10px 15px 0px;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* display: none; */
+}
+
+.myplayer:hover .controls-btns {
+    display: flex;
 }
 
 .myplayer .controls-btns .btns {
@@ -69,7 +100,6 @@ body {
 .myplayer .controls-btns .left .btns:not(:first-child) ,
 .myplayer .controls-btns .right .btns:not(:first-child) {
     margin-left: 20px;
-
 }
 
 .myplayer .controls-btns .left .timer {
