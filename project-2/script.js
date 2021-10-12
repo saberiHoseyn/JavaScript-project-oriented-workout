@@ -12,6 +12,12 @@ let videoTime = timerArea.querySelector(".videoTime");
 
 let timerBar = controls.querySelector(".controls-progressbar-current");
 
+let volumeIcon = controls.querySelector(".volume ion-icon");
+let volumeProgressBar = controls.querySelector(".volume .volume-progress");
+let volumeProgressBarInput = volumeProgressBar.querySelector("input");
+
+media.volume = .5;
+
 media.addEventListener("timeupdate" , function() {
     currentTimer.textContent = getTime(media.currentTime);
     videoTime.textContent = getTime(media.duration);
@@ -43,7 +49,14 @@ timerBar.addEventListener("input" , function() {
     media.currentTime = (this.value / 100) * media.duration;
 });
 
+volumeIcon.addEventListener("click" , function() {
+    volumeProgressBar.classList.toggle("active");
+});
 
+volumeProgressBarInput.addEventListener("input" , function() {
+    media.volume = this.value / 100;
+    this.style = `background: linear-gradient(90deg, rgba(230,126,34,1) ${this.value}%, #e1e1e1 0%);`
+});
 
 
 
