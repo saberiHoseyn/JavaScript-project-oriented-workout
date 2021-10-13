@@ -58,6 +58,31 @@ volumeProgressBarInput.addEventListener("input" , function() {
     this.style = `background: linear-gradient(90deg, rgba(230,126,34,1) ${this.value}%, #e1e1e1 0%);`
 });
 
+fullscreen.addEventListener("click" , function() {
+    
+    if(!document.fullscreenElement) {
+        if(playerArea.requestFullscreen) {
+            playerArea.requestFullscreen();
+        }else if(playerArea.mozFullscreenElement) {
+            playerArea.mozFullscreenElement();
+        }else  if(playerArea.msFullscreenElement) {
+            playerArea.msFullscreenElement();
+        }else  if(playerArea.webkitFullscreenElement) {
+            playerArea.webkitFullscreenElement();
+        }  
+    }else {
+        if(document.exitFullscreen) {
+            document.exitFullscreen();
+        }else if(document.mozCancelFullscreen) {
+            document.mozCancelFullscreen();
+        }else if(document.msCancelFullscreen) {
+            document.msCancelFullscreen();
+        }else if(document.webkitCancelFullscreen) {
+            document.webkitCancelFullscreen();
+        };
+    };
+});
+
 
 
 let togglePlayIcon = () => {
