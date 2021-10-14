@@ -1,0 +1,19 @@
+html {
+    color: #2f3542;
+    font-family:  'Vazir', serif;
+}
+
+body {
+    margin: 0;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 6rem;
+}
