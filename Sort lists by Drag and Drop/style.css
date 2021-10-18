@@ -38,16 +38,15 @@ body {
   
   
   .list .list-item .list-item-content .item-title {
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: bold;
   }
   
-  .list-item.dragElem {
-    opacity: 0.4;
+  .list-item.elementDragStart {
+    opacity: 0.5;
   }
   
   .list-item.over {
-    /* border: 2px dashed #000; */
-    border-top: 2px solid blue;
+    border-top: 3px solid red;
   }
 

@@ -1,7 +1,4 @@
 
-
-
-
 let data = [
 
     { id : 1 , titel : "آیتم شماره 1" , text : "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد"},
@@ -16,23 +13,23 @@ let data = [
 
 
 new draggable({
-    el : document.querySelector("#list"),
+    element : document.querySelector("#list"),
     list : data,
-    template : (item) => {
-        return `
+    template : (item)=> {
+        return`        
         <div class="list-item" id="${item.id}">
             <div class="list-item-head">
                 <span class="head-id">${item.id}</span>
             </div>
+
             <div class="list-item-content">
-                <span class="item-titel">${item.titel}</span>
+                <span class="item-title">${item.titel}</span>
                 <p>${item.text}</p>
             </div>
-        </div>
-        `
+        </div>`
     },
     update : list =>{
         console.log(list)
-
     }
 });
+
